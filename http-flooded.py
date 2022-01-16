@@ -1,5 +1,3 @@
-# Python code to pick a random
-# word from a text file
 import random
 from random import randint
 import requests
